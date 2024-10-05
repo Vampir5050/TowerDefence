@@ -356,7 +356,9 @@
 "Assets/Scripts/CubeEditor.cs"
 "Assets/Scripts/EnemyMovement.cs"
 "Assets/Scripts/PathFinder.cs"
+"Assets/Scripts/Towers.cs"
 "Assets/Scripts/WayPoint.cs"
+"Assets/Scripts/Yadra.cs"
 -langversion:9.0
 /deterministic
 /optimize+

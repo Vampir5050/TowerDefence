@@ -21,7 +21,7 @@ public class PathFinder : MonoBehaviour
     {
         LoadBlock();
         SetColorStartAndEnd();
-        ExploreNearPoints();
+        //ExploreNearPoints();
     }
 
    

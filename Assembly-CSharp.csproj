@@ -63,8 +63,14 @@
     <Compile Include="Assets\Scripts\PathFinder.cs" />
     <Compile Include="Assets\Scripts\CubeEditor.cs" />
     <Compile Include="Assets\Scripts\EnemyMovement.cs" />
+    <Compile Include="Assets\Scripts\Towers.cs" />
     <Compile Include="Assets\Scripts\WayPoint.cs" />
+    <Compile Include="Assets\Scripts\Yadra.cs" />
     <Compile Include="Assets\Mini Simple Characters Skeleton Demo\Readme\Scripts\Readme.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\TowerDefence_Vsquad\INFO\Info.txt" />
+    <None Include="Assets\TowerDefence_Vsquad\Materials\Scene\sky.shader" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
