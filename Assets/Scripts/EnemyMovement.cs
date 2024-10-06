@@ -17,6 +17,7 @@ public class EnemyMovment : MonoBehaviour
     {
         foreach(WayPoint wayPoint in wayPoints)
         {
+            transform.LookAt(wayPoint.transform);
             transform.position = wayPoint.transform.position;
             yield return new WaitForSeconds(1);
         }
