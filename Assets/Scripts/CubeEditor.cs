@@ -4,40 +4,27 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [ExecuteInEditMode]
-[RequireComponent(typeof(WayPoint))]
 public class CubeEditor : MonoBehaviour
 {
-    TextMesh labale;
-    string labelName;
-
-    Vector3 gridPos;
-
-    WayPoint wayPoint;
-
-    private void Awake()
-    {
-        labale = GetComponentInChildren<TextMesh>();
-        wayPoint = GetComponent<WayPoint>();
-    }
+    const int gridSize = 10;
 
     void Update()
     {
-        SnapToGrid();
-
-        UpdateLabel();
+        SnapToGrid();    
     }
 
     private void SnapToGrid()
     {
-        int gridSize = wayPoint.GetGridSize();
-        transform.position = new Vector3(wayPoint.GetGridPos().x*gridSize, 0f, wayPoint.GetGridPos().y*gridSize);
+        transform.position = new Vector3(GetGridPos().x*gridSize, 0f, GetGridPos().y*gridSize);
     }
 
-    private void UpdateLabel()
+    public Vector2Int GetGridPos()
     {
-        int gridSize = wayPoint.GetGridSize();
-        labelName = wayPoint.GetGridPos().x  + "," + wayPoint.GetGridPos().y;
-        labale.text = labelName;
-        gameObject.name = labelName;
+        return new Vector2Int(
+        Mathf.RoundToInt(transform.position.x / gridSize),
+        Mathf.RoundToInt(transform.position.z / gridSize)
+        );
     }
+
+
 }
